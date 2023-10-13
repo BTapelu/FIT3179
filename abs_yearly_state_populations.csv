@@ -1,0 +1,281 @@
+﻿Year,State,Population
+1989,New South Wales,5803079
+1990,New South Wales,5862497
+1991,New South Wales,5928072
+1992,New South Wales,5977823
+1993,New South Wales,6020171
+1994,New South Wales,6071872
+1995,New South Wales,6143971
+1996,New South Wales,6214548
+1997,New South Wales,6274966
+1998,New South Wales,6338790
+1999,New South Wales,6409971
+2000,New South Wales,6485081
+2001,New South Wales,6558484
+2002,New South Wales,6599441
+2003,New South Wales,6634509
+2004,New South Wales,6669206
+2005,New South Wales,6718023
+2006,New South Wales,6786160
+2007,New South Wales,6883852
+2008,New South Wales,7001782
+2009,New South Wales,7101504
+2010,New South Wales,7179891
+2011,New South Wales,7258722
+2012,New South Wales,7353189
+2013,New South Wales,7454938
+2014,New South Wales,7562171
+2015,New South Wales,7671401
+2016,New South Wales,7795625
+2017,New South Wales,7900946
+2018,New South Wales,8003564
+2019,New South Wales,8088361
+2020,New South Wales,8094300
+2021,New South Wales,8101223
+2022,New South Wales,8243268
+2023,New South Wales,8293965
+1989,Victoria,4348225
+1990,Victoria,4400707
+1991,Victoria,4435083
+1992,Victoria,4458219
+1993,Victoria,4466738
+1994,Victoria,4483205
+1995,Victoria,4517353
+1996,Victoria,4552904
+1997,Victoria,4586156
+1998,Victoria,4629345
+1999,Victoria,4677581
+2000,Victoria,4730855
+2001,Victoria,4790212
+2002,Victoria,4845024
+2003,Victoria,4900176
+2004,Victoria,4957147
+2005,Victoria,5023203
+2006,Victoria,5103965
+2007,Victoria,5199503
+2008,Victoria,5313285
+2009,Victoria,5419249
+2010,Victoria,5495711
+2011,Victoria,5591818
+2012,Victoria,5709586
+2013,Victoria,5832585
+2014,Victoria,5957512
+2015,Victoria,6093049
+2016,Victoria,6235781
+2017,Victoria,6358210
+2018,Victoria,6479695
+2019,Victoria,6590050
+2020,Victoria,6567195
+2021,Victoria,6566092
+2022,Victoria,6713075
+2023,Victoria,6766559
+1989,Queensland,2864007
+1990,Queensland,2928713
+1991,Queensland,2990441
+1992,Queensland,3057138
+1993,Queensland,3130986
+1994,Queensland,3198877
+1995,Queensland,3271743
+1996,Queensland,3330579
+1997,Queensland,3380394
+1998,Queensland,3427505
+1999,Queensland,3481034
+2000,Queensland,3537670
+2001,Queensland,3611203
+2002,Queensland,3700791
+2003,Queensland,3788560
+2004,Queensland,3872351
+2005,Queensland,3964175
+2006,Queensland,4055845
+2007,Queensland,4159990
+2008,Queensland,4275551
+2009,Queensland,4367454
+2010,Queensland,4436882
+2011,Queensland,4518649
+2012,Queensland,4611304
+2013,Queensland,4685439
+2014,Queensland,4747263
+2015,Queensland,4804933
+2016,Queensland,4882939
+2017,Queensland,4960965
+2018,Queensland,5046434
+2019,Queensland,5129741
+2020,Queensland,5184329
+2021,Queensland,5261012
+2022,Queensland,5382028
+2023,Queensland,5418453
+1989,South Australia,1425461
+1990,South Australia,1438882
+1991,South Australia,1450862
+1992,South Australia,1457241
+1993,South Australia,1461102
+1994,South Australia,1463977
+1995,South Australia,1466605
+1996,South Australia,1471997
+1997,South Australia,1479003
+1998,South Australia,1487042
+1999,South Australia,1495218
+2000,South Australia,1500129
+2001,South Australia,1507825
+2002,South Australia,1515723
+2003,South Australia,1524727
+2004,South Australia,1532562
+2005,South Australia,1544852
+2006,South Australia,1561300
+2007,South Australia,1578489
+2008,South Australia,1597880
+2009,South Australia,1618578
+2010,South Australia,1632482
+2011,South Australia,1647183
+2012,South Australia,1663082
+2013,South Australia,1678052
+2014,South Australia,1693107
+2015,South Australia,1705937
+2016,South Australia,1719580
+2017,South Australia,1735654
+2018,South Australia,1755715
+2019,South Australia,1778928
+2020,South Australia,1794514
+2021,South Australia,1805733
+2022,South Australia,1834846
+2023,South Australia,1844616
+1989,Western Australia,1596225
+1990,Western Australia,1624390
+1991,Western Australia,1647408
+1992,Western Australia,1668515
+1993,Western Australia,1690348
+1994,Western Australia,1718549
+1995,Western Australia,1751933
+1996,Western Australia,1783556
+1997,Western Australia,1810928
+1998,Western Australia,1840078
+1999,Western Australia,1866265
+2000,Western Australia,1892531
+2001,Western Australia,1917752
+2002,Western Australia,1938610
+2003,Western Australia,1966130
+2004,Western Australia,1994241
+2005,Western Australia,2029936
+2006,Western Australia,2076867
+2007,Western Australia,2135006
+2008,Western Australia,2208928
+2009,Western Australia,2263747
+2010,Western Australia,2319063
+2011,Western Australia,2385947
+2012,Western Australia,2457489
+2013,Western Australia,2502188
+2014,Western Australia,2528619
+2015,Western Australia,2547745
+2016,Western Australia,2569606
+2017,Western Australia,2599928
+2018,Western Australia,2636404
+2019,Western Australia,2688799
+2020,Western Australia,2728187
+2021,Western Australia,2763015
+2022,Western Australia,2829589
+2023,Western Australia,2855594
+1989,Tasmania,458410
+1990,Tasmania,464520
+1991,Tasmania,468549
+1992,Tasmania,471258
+1993,Tasmania,472983
+1994,Tasmania,474076
+1995,Tasmania,475148
+1996,Tasmania,475529
+1997,Tasmania,474215
+1998,Tasmania,473450
+1999,Tasmania,473294
+2000,Tasmania,473200
+2001,Tasmania,473890
+2002,Tasmania,475998
+2003,Tasmania,481411
+2004,Tasmania,484778
+2005,Tasmania,488098
+2006,Tasmania,491515
+2007,Tasmania,495858
+2008,Tasmania,501774
+2009,Tasmania,506461
+2010,Tasmania,510219
+2011,Tasmania,511739
+2012,Tasmania,511813
+2013,Tasmania,513015
+2014,Tasmania,514040
+2015,Tasmania,515694
+2016,Tasmania,521981
+2017,Tasmania,531561
+2018,Tasmania,542927
+2019,Tasmania,553340
+2020,Tasmania,561881
+2021,Tasmania,568628
+2022,Tasmania,572099
+2023,Tasmania,572660
+1989,Northern Territory,162097
+1990,Northern Territory,165047
+1991,Northern Territory,167043
+1992,Northern Territory,170420
+1993,Northern Territory,173590
+1994,Northern Territory,176761
+1995,Northern Territory,182829
+1996,Northern Territory,187342
+1997,Northern Territory,191259
+1998,Northern Territory,194390
+1999,Northern Territory,197757
+2000,Northern Territory,200045
+2001,Northern Territory,201751
+2002,Northern Territory,201549
+2003,Northern Territory,201708
+2004,Northern Territory,203857
+2005,Northern Territory,207385
+2006,Northern Territory,211029
+2007,Northern Territory,216618
+2008,Northern Territory,222526
+2009,Northern Territory,227783
+2010,Northern Territory,230299
+2011,Northern Territory,232952
+2012,Northern Territory,238728
+2013,Northern Territory,242304
+2014,Northern Territory,242753
+2015,Northern Territory,244090
+2016,Northern Territory,246065
+2017,Northern Territory,246862
+2018,Northern Territory,245920
+2019,Northern Territory,246213
+2020,Northern Territory,247819
+2021,Northern Territory,248125
+2022,Northern Territory,250540
+2023,Northern Territory,251654
+1989,Australian Capital Territory,279219
+1990,Australian Capital Territory,285012
+1991,Australian Capital Territory,291523
+1992,Australian Capital Territory,296519
+1993,Australian Capital Territory,300490
+1994,Australian Capital Territory,303289
+1995,Australian Capital Territory,307022
+1996,Australian Capital Territory,310655
+1997,Australian Capital Territory,310281
+1998,Australian Capital Territory,312300
+1999,Australian Capital Territory,315431
+2000,Australian Capital Territory,318941
+2001,Australian Capital Territory,322874
+2002,Australian Capital Territory,325950
+2003,Australian Capital Territory,327596
+2004,Australian Capital Territory,329498
+2005,Australian Capital Territory,333505
+2006,Australian Capital Territory,338381
+2007,Australian Capital Territory,344176
+2008,Australian Capital Territory,351101
+2009,Australian Capital Territory,357859
+2010,Australian Capital Territory,364833
+2011,Australian Capital Territory,372070
+2012,Australian Capital Territory,379812
+2013,Australian Capital Territory,386318
+2014,Australian Capital Territory,391981
+2015,Australian Capital Territory,398874
+2016,Australian Capital Territory,408878
+2017,Australian Capital Territory,420226
+2018,Australian Capital Territory,430758
+2019,Australian Capital Territory,440267
+2020,Australian Capital Territory,447650
+2021,Australian Capital Territory,452670
+2022,Australian Capital Territory,461042
+2023,Australian Capital Territory,464601
