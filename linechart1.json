@@ -37,7 +37,7 @@
         "y": {"field": "Deaths per 100,000 population", "type": "quantitative"},
         "color": {"field": "State", "type": "nominal", "scale": 
         {"domain": ["Northern Territory", "Victoria", "New South Wales", "Queensland", "Western Australia", "South Australia",
-      "Tasmania", "Australian Capital Territory"], "range": ["Red", "#F6A52C", "#FFDE00", "#43423B", "#3D8D45", "#3C78DF", "#E673D7", "#9C2675"]}},
+      "Tasmania", "Australian Capital Territory"], "range": ["Red", "Gray", "Gray", "Gray", "Gray", "Gray", "Gray", "Gray"]}},
 
         "tooltip": [
             {"field": "State", "type": "nominal", "title": "State"},
