@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {"url": "https://raw.githubusercontent.com/BTapelu/FIT3179/main/ardd_fatalities.csv"},
+
+    "width": 400,
+
+    "height": 250,
+
+    "params": [
+        {
+          "name": "highlight",
+          "select": {"type": "point", "on": "pointerover"}
+        },
+        {"name": "select", "select": "point"}
+      ],
+
+    "mark": {
+        "type": "bar",
+        "tooltip": true
+    },
+
+    "transform": [
+        {"filter": "datum.Age_Group !== '-9'"}
+    ],
+
+    "encoding": {
+        "x": {"field": "State", "type": "nominal"},
+        "y": {"aggregate": "count", "type": "quantitative", "stack": "normalize", "title": "Percentage", "axis": {"format": "%"}},
+        "color": {"field": "Age_Group", "type": "nominal", "title": "Age Group", "scale": {"scheme": "yelloworangered"}},
+        "fillOpacity": {
+            "condition": {"param": "select", "value": 1},
+            "value": 0.3
+          },
+        "strokeWidth": {
+            "condition": [
+              {
+                "param": "select",
+                "empty": false,
+                "value": 2
+              },
+              {
+                "param": "highlight",
+                "empty": false,
+                "value": 1
+              }
+            ],
+            "value": 0
+          }
+    }    
+}

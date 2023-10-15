@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {"url": "https://raw.githubusercontent.com/BTapelu/FIT3179/main/ardd_fatalities.csv"},
+
+    "width": 400,
+
+    "height": 250,
+
+    "transform": [
+        {"filter": "datum.State === 'Northern Territory'"},
+        {"filter": "datum.Speed_Limit > 0"},
+        {"filter": "datum.Road_User === 'Driver'"}
+    ],
+    "mark": {"type": "bar", "tooltip":true},
+    "encoding": {
+        "x": {
+            "bin": {"maxbins": 130, "step": 10},
+            "field": "Speed_Limit",
+            "title": "Speed Limit of Road (km/h)"
+        },
+        "y": {"aggregate": "count", "title": "Number of Fatalities"},
+        "color": {"value": "#EC3232"}
+    }
+}
+

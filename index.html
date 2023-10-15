@@ -2,10 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="vega_lite_vis.js"></script>
+
+    <title>FIT3179 Data Visualisation 2</title>
 </head>
 <body>
-    <h1>YO YO</h1>
+    
+    <div class="centre">
+        <header>
+            <h1 id="title">CRISIS ON THE ROADS: UNRAVELING NORTHERN TERRITORY'S CHALLENGE WITH CAR FATALITIES</h1>
+        </header>
+
+        <hr>
+
+        <div id="section1">
+            <h2>Australian Car Fatality Distribution 2003-2023</h2>
+            <div id="choroplethmap1" class="graph"></div>
+            <p class="text">Check out our map — it's like a neon sign screaming a not-so-great fact: the <b id="nt">Northern Territory</b> consistently records 
+                the <b>nation's highest car fatality rates per capita</b>. The roads here tell a story, and it's not a happy one. 
+                This ain't just about numbers; it's about digging into what makes NT roads different. We're on a mission to 
+                figure out the unique stuff making our roads riskier, aiming for quick insights into the why behind the tough 
+                ride in the Top End.</p>
+        </div>
+        
+        <div id="section5">
+            <h3>Australian Car Fatalities by Age Group</h3>
+            <div id="barchart1" class="graph"></div>
+            <p class="text">
+                Unlike the national rhythm, the 26-39 age group in the NT own a larger slice of the tragic pie, while those 65 and 
+                older catch a break. Why the split? Theories abound — perhaps the vast, open roads tempt the younger crew. 
+                Consider this: could tightening the rules for 26-39 drivers shift the narrative and make NT roads safer for all? 
+                It's a road safety puzzle worth exploring in the Territory.
+            </p>
+        </div>
+
+        <div id="section6">
+            <h3>Australian Car Fatalities by Day of Week</h3>
+            <div id="linechart1" class="graph"></div>
+            <p class="text">
+                The line chart's like a heartbeat monitor, and the NT's got a rhythm of its own — it's leading the daily car death 
+                count by a mile (or 1.6 kilometres). Friday and Saturday are the troublemakers nationwide. Why? Most Weekend 
+                warriors on the drink might be the culprits. Time to consider stricter weekend rules or more eyes on the road. 
+                Let's curb the Friday night fever and make the roads safer for all.
+            </p>
+        </div>
+
+        <hr>
+
+        <div id="section2">
+            <h2>A Closer Look...</h2>
+            <h3>Northern Territory LGA Car Fatality Distribution 2015-2023</h3>
+            <div id="choroplethmap2" class="graph"></div>
+            <p class="text">Alright, fasten your seatbelts for a closer look at the Local Government Areas (LGAs) in the 
+                Northern Territory. Litchfield has been facing a bit of tough luck, showing higher mortality rates compared to 
+                its LGA counterparts. But when you zoom out, it's a bit of a rollercoaster ride across different neighborhoods 
+                each year. Maybe it's time for a community-wide driving check-in - hit the road with a fresh set of eyes, so we're 
+                all in sync on road safety. This is just a piece of the puzzle; let's dive into some other stats to get the 
+                full picture.</p>
+        </div>
+
+        <div id="section3">
+            <h3>Northern Territory Car Fatalities by Speed Limit</h3>
+            <div id="histogram1" class="graph"></div>
+            <p class="text">
+                The graph tells it like it is: as speed limits go up in the NT, so do the car wrecks. No shocker, considering 
+                the wide-open spaces. Surprisingly low casualties in the 90-100km/h range, but here's the deal - outside built-up 
+                areas, the default is 110km/h, making those 90-100km/h roads rare. Now, take a look at >100km/h — boom, the 
+                numbers spike. It's the outback reality check. Maybe it's time the government tap the brakes on those speed 
+                limits for safer roads and fewer heartbreaks.
+            </p>
+        </div>
+
+        <div id="section4">
+            <h3>Northern Territory Car Fatalities by Time of Day</h3>
+            <div id="piechart1" class="graph"></div>
+            <p class="text">
+                The numbers don't lie—when the sun takes a break, danger hits the road in the NT. Nighttime accounts for a 
+                hefty 55.7% of car fatalities, with daytime trailing at 44.3%. Why the dark divide? Theories swirl — maybe 
+                stricter rules for nighttime drivers, like enforcing a passenger rule for young ones, could help. Shedding light 
+                on secluded roads with more poles might guide the way. And let's not forget the silent killer — DUI. A campaign 
+                for sober driving could be the beacon in the night for safer roads.
+            </p>
+        </div>
+    
+        <hr>
+
+        <h6 id="publisher">Visualisation by: Brandon Tapelu 32552793</h6>
+        
+    </div>
+
 </body>
 </html>

@@ -1,0 +1,91 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "width": 600,
+    
+    "height": 450,
+    
+    "projection": {"type": "equirectangular"},
+    
+    "params": [
+      {"name": "year_filter", "value": 2015, "bind": {"input": "range", "min": 2015, "max": 2023, "step": 1, "name": "Year: "
+      }}],
+    
+    "layer": [
+        {
+            "data": {
+              "url": "https://raw.githubusercontent.com/BTapelu/FIT3179/main/LGA_2023_AUST_GDA2020_NT.json",
+              "format": {
+                "type": "topojson",
+                "feature": "LGA_2023_AUST_GDA2020"
+              }
+            },
+
+            "transform": [
+                {
+                "calculate": "0", "as": "zero"}
+            ],
+
+            "mark": {"type": "geoshape", "fill": "darkgray", "stroke": "gray"},
+
+            "encoding": {
+                "tooltip": [
+                  {"field": "properties.LGA_NAME23", "type": "nominal", "title": "LGA"},
+                  {"field": "zero", "title": "Fatalities"}
+                ]
+              }
+          },
+
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/BTapelu/FIT3179/main/ardd_fatalities.csv"
+        },
+  
+        "transform": [
+          {
+            "aggregate": [{
+              "op": "count",
+              "as": "fatalities"
+            }],
+            "groupby": ["LGA_NAME23", "Year"]
+          },
+  
+          {
+            "lookup": "LGA_NAME23",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/BTapelu/FIT3179/main/LGA_2023_AUST_GDA2020_NT.json",
+                "format": {"type": "topojson", "feature": "LGA_2023_AUST_GDA2020"}
+              },
+              "key": "properties.LGA_NAME23"
+            },
+            "as": "geo"
+          },
+  
+          {"filter": "datum.Year == year_filter"},
+
+          {"calculate": "datum.fatalities", "as": "w"}
+        ],
+  
+        "mark": {"type": "geoshape", "stroke": "gray"},
+        
+        "encoding": {
+          "shape": {"field": "geo", "type": "geojson"},
+  
+          "color": {
+            "field": "w",
+            "type": "quantitative",
+            "title": ["Number of", "deaths"],
+            "scale": {"domain": [0, 10], "scheme": "yelloworangered"}
+          },
+  
+          "tooltip": [
+            {"field": "LGA_NAME23", "type": "nominal", "title": "LGA"},
+            {"field": "Year", "title": "Year"},
+            {"field": "w", "title": "Deaths"}
+          ]
+        }
+      }
+    ]
+  }
+  

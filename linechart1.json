@@ -1,0 +1,47 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "width": 350,
+
+    "height": 240,
+
+    "data": {"url": "https://raw.githubusercontent.com/BTapelu/FIT3179/main/ardd_fatalities.csv"},
+
+    "transform": [
+        {
+            "aggregate": [{
+              "op": "count",
+              "as": "fatalities"
+            }],
+            "groupby": ["State", "Dayweek"]
+          },
+
+        {
+            "lookup": "State",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/BTapelu/FIT3179/main/abs_yearly_state_populations.csv"
+              },
+              "key": "State",
+              "fields": ["Population"]
+            }
+          },
+        
+        {"calculate": "(datum.fatalities / datum.Population) * 100000", "as": "Deaths per 100,000 population"} 
+    ],
+
+    "mark": {"type": "line", "point": true},
+    
+    "encoding": {
+        "x": {"field": "Dayweek", "type": "ordinal", "sort": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]},
+        "y": {"field": "Deaths per 100,000 population", "type": "quantitative"},
+        "color": {"field": "State", "type": "nominal", "scale": 
+        {"domain": ["Northern Territory", "Victoria", "New South Wales", "Queensland", "Western Australia", "South Australia",
+      "Tasmania", "Australian Capital Territory"], "range": ["Red", "#F6A52C", "#FFDE00", "#43423B", "#3D8D45", "#3C78DF", "#E673D7", "#9C2675"]}},
+
+        "tooltip": [
+            {"field": "State", "type": "nominal", "title": "State"},
+            {"field": "Deaths per 100,000 population", "title": "Deaths per 100,000 population", "format": ".2f"}
+          ]
+    }
+}

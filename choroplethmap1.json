@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width": 580,
+  
+  "height": 420,
+  
+  "projection": {"type": "equirectangular"},
+  
+  "params": [
+    {"name": "year_filter", "value": 2003, "bind": {"input": "range", "min": 2003, "max": 2023, "step": 1, "name": "Year: "
+    }}],
+  
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/BTapelu/FIT3179/main/ardd_fatalities.csv"
+      },
+
+      "transform": [
+        {
+          "aggregate": [{
+            "op": "count",
+            "as": "fatalities"
+          }],
+          "groupby": ["State", "Year"]
+        },
+
+        {
+          "lookup": "State",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/BTapelu/FIT3179/main/ne_10m_admin_1_states_provinces.json",
+              "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+            },
+            "key": "properties.name"
+          },
+          "as": "geo"
+        },
+
+        {
+          "lookup": "State",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/BTapelu/FIT3179/main/abs_yearly_state_populations.csv"
+            },
+            "key": "State",
+            "fields": ["Population"]
+          }
+        },
+
+        {"filter": "datum.Year == year_filter"},
+
+
+        {"calculate": "(datum.fatalities / datum.Population) * 100000", "as": "Deaths per 100,000 population"} 
+      ],
+
+      "mark": {"type": "geoshape", "stroke": "gray"},
+      
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+
+        "color": {
+          "field": "Deaths per 100,000 population",
+          "type": "quantitative",
+          "title": ["Deaths per", "100,000 population"],
+          "scale": {"domain": [0, 30], "scheme": "yelloworangered"}
+        },
+
+        "tooltip": [
+          {"field": "State", "type": "nominal", "title": "State"},
+          {"field": "Year", "title": "Year"},
+          {"field": "Deaths per 100,000 population", "title": "Deaths per 100,000 population", "format": ".2f"}
+        ]
+      }
+    }
+  ]
+}

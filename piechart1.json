@@ -1,0 +1,33 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "width": 370,
+
+    "height": 250,
+
+    "data": {
+      "url": "https://raw.githubusercontent.com/BTapelu/FIT3179/main/ardd_fatalities.csv"
+    },
+
+    "transform": [
+        {"filter": "datum.State === 'Northern Territory'"},
+
+        {"aggregate": [{
+            "op": "count",
+            "as": "fatalities"
+          }],
+          "groupby": ["Time_of_day"]
+        }
+    ],
+
+    "mark": {
+        "type": "arc",
+        "tooltip": true
+    },
+    
+    "encoding": {
+      "theta": {"field": "fatalities", "type": "quantitative", "stack": "normalize", "title": "Number of fatalities"},
+      "color": {"field": "Time_of_day", "type": "nominal", "title": "Day/Night", 
+      "scale": {"domain": ["Day", "Night"], "range": ["#F6A52C", "#606060"]}}
+    }
+  }
